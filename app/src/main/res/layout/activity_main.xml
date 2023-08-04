@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="#3F2E3E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/enemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/enemy"
+            android:textColor="@color/text2"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/pict_enemy"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="120dp"
+            android:contentDescription="@string/enemy"
+            android:src="@drawable/paper" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/scissors"
+        android:clickable="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="180dp"
+        android:src="@drawable/scissors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/you" />
+
+    <ImageView
+        android:id="@+id/rock"
+        android:clickable="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="180dp"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scissors"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/you" />
+
+    <ImageView
+        android:id="@+id/paper"
+        android:clickable="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="180dp"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scissors"
+        android:contentDescription="@string/you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/text"
+        android:layout_height="wrap_content"
+        android:text="@string/youu"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scissors" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
